@@ -59,14 +59,14 @@ class Morse:
     self.CODE_INV=dict((v,k) for k,v in self.CODE.items())
 
  #Take a word and convert to Morse in a dictionary   
-  def word2morse(self, morse_word):
+  def encode(self, morse_word):
     morse_out=[]
     for letter in morse_word:
       morse_out.append(self.CODE.get(letter.upper()))
     return morse_out
   
  #Take a morse string and convert into a word 
-  def morse2word (self, morse_code):
+  def decode (self, morse_code):
     word_out=""
     morse_dict = morse_code.split()
     for chars in morse_dict:
